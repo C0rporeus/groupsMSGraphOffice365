@@ -73,7 +73,7 @@ namespace graphconsoleapp
           Console.WriteLine(memberUser.Id + ": " + memberUser.DisplayName + " <" + memberUser.Mail + ">");
         }
       }
-      var client1 = GetAuthenticatedGraphClient(...);
+      var client1 = GetAuthenticatedGraphClient(config, userName, userPassword);
       var requestOwnerOf = client1.Me.OwnedObjects.Request();
       var resultsOwnerOf = requestOwnerOf.GetAsync().Result;
       foreach (var ownedObject in resultsOwnerOf)
